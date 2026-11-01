@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "test": "cypress run --spec cypress/e2e/automation-exercise.cy.js",
+    "test:headed": "cypress run --headed --browser chrome --spec cypress/e2e/automation-exercise.cy.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.7.3"
+    "cypress": "^13.7.3",
+    "cypress-mochawesome-reporter": "^5.0.0"
   }
 }

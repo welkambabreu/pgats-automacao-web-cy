@@ -65,6 +65,12 @@ cypress.config.js                 # baseUrl e timeouts
 
 > A pasta `cypress/e2e/1-getting-started` e `2-advanced-examples` contém apenas exemplos padrão do Cypress.
 
+## Relatórios e CI
+
+- Relatório HTML (mochawesome) gerado em `cypress/reports/index.html` após `npm test`.
+- Workflow do GitHub Actions em [`.github/workflows/cypress.yml`](.github/workflows/cypress.yml): roda a cada push na `main`, em pull requests e manualmente (aba *Actions* > *Run workflow*). O relatório fica disponível como artefato `relatorio-mochawesome`; em caso de falha, os screenshots ficam no artefato `screenshots`.
+- `retries` configurado (2 tentativas em modo `run`) para reduzir falhas intermitentes.
+
 ## Observações
 
 - A execução completa leva alguns minutos, pois vários cenários criam e excluem contas.
